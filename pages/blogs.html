@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/navigation_bar.css" />
+    <link rel="stylesheet" href="../styles/blogs.css" />
+    <title>Impano Joshua - Portfolio</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="nav-container">
+        <div class="logo">JOSH</div>
+        <div class="nav-links">
+          <ul class="links-container">
+            <li class="link">
+              <a href="../index.html">Home</a>
+            </li>
+            <li class="link">
+              <a href="./aboutme.html">About</a>
+            </li>
+
+            <li class="link">
+              <a href="./login.html">Login</a>
+            </li>
+
+            <li class="link">
+              <a href="./blogs.html">blog</a>
+            </li>
+          </ul>
+          <span class="menu-link">Menu</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="title">
+      <h1>Blog articles</h1>
+    </div>
+    <div class="tech">
+      <h2>Tech related</h2>
+      <p>
+        Debugging Published 7 months ago Definition: Debugging is the process of
+        detecting and removing existing and potential errors (also called
+        'bugs') in a software code that can cause it to behave unexpectedly or
+        crash. In the career of software development you are likely to face bugs
+        as explained in the definition of debugging and in this article i am
+        going to walk you through all kinds of programming bugs and tools and
+        techniques used to solve those kinds of programming bugs. Types of Bugs
+        1. Syntax Errors. Just like human languages, computer languages have
+        grammar rules. But while humans are able to communicate with
+        less-than-perfect grammar, computers can’t ignore mistakes, i.e. syntax
+        errors. For example, let’s say the correct syntax for printing something
+        is console.log(‘Hello my name is Bruno’), and we accidentally forget one
+        of the parentheses while coding. A syntax error will happen, and this
+        will stop the program from running. As your proficiency with programming
+        language increases, you will make syntax errors less frequently. The
+        easiest way to prevent them from causing you problems is to be aware of
+        them early. Many text editors or IDEs will come with the ability to warn
+        you about syntax errors at the time of writing. 2. Logic Errors. Logic
+        errors can be the hardest to track down. Everything looks like it is
+        working; you have just programmed the computer to do the wrong thing.
+        Technically the program is correct, but the results won’t be what you
+        expected. If you didn’t check the requirements beforehand and wrote code
+        to return the oldest user in your system when you needed the newest, you
+        would have a logic error. A famous example happened in 1999 when NASA
+        lost a spacecraft due to miscalculations between English and American
+        units. The software was coded one way but needed to work another. When
+        writing your tests, show them to the product manager or product owner to
+        confirm that the logic you’re about to write is correct. In the example
+        above, someone closer to the business would have spotted that you aren’t
+        mentioning the fact it is the newest user that is required. 3.
+        Compilation Errors. Some programming languages require a compilation
+        step. Compilation is where your high-level language converts into a
+        lower-level language that the computer can understand better. A
+        compilation or compile-time error happens when the compiler doesn’t know
+        how to turn your code into the lower-level code. In our syntax error
+        example, if we were compiling print('hello', the compiler would stop and
+        tell us it doesn’t know how to convert this into a lower-level language
+        because it expected a ) after the '. If there is a compile-time error in
+        your software, you won’t be able to get it tested or launched. Like
+        syntax errors, you will get better at avoiding these with time, but in
+        general, the best thing you can do is get early feedback when it
+        happens. Compilation happens across all files of your project at the
+        same time. If you’ve made lots of changes and see lots of compiler
+        warnings or errors, it can be very daunting. By running the compiler
+        often, you will get the feedback you need sooner, and you will more
+        easily know where to address the issues. These are the main bugs that
+        most programmers meet, Other bugs include Runtime, Arithmetic,
+        resource,interface errors/bugs. Process to help you debug such errors or
+        bugs mentioned above. The debugging process usually consists of the
+        following: examine the error symptoms, identify the cause, and finally
+        fix the error. This process may be quite difficult and require a large
+        amount of work, because of the following reasons: The symptoms may not
+        give clear indications about the cause. In particular, the cause and the
+        symptom may be remote, either in space (i.e., in the program code), or
+        in time (i.e., during the execution of the program), or both. Defensive
+        programming can help reduce the distance between the cause and the
+        effect of an error. Symptoms may be difficult to reproduce. Replay is
+        needed to better understand the problem. Being able to reproduce the
+        same program execution is a standard obstacle in debugging concurrent
+        programs. An error may show up only in one particular interleaving of
+        statements from the parallel threads, and it may be almost impossible to
+        reproduce that same, exact interleaving. Errors may be correlated.
+        Therefore, symptoms may change during debugging, after fixing some of
+        the errors. The new symptoms need to be re-examined. The good part is
+        that the same error may have multiple symptoms; in that case, fixing the
+        error will eliminate all of them. Fixing an error may introduce new
+        errors. Statistics indicate that in many cases fixing a bug introduces a
+        new one! This is the result of trying to do quick hacks to fix the
+        error, without understanding the overall design and the invariants that
+        the program is supposed to maintain. Once again, a clean design and
+        careful thinking can avoid many of these cases. DEBUGGING STRATEGIES
+        Although there is no precise procedure for fixing all bugs, there are a
+        number of useful strategies that can reduce the debugging effort. A
+        significant part (if not all) of this process is spent localizing the
+        error, that is, figuring out the cause from its symptoms. Below are
+        several useful strategies to help with this. Keep in mind that different
+        techniques are better suited in different cases; there is no clear best
+        method. It is good to have knowledge and experience with all of these
+        approaches. Sometimes, a combination of one or more of these approaches
+        will lead you to the error. Incremental and bottom-up program
+        development. One of the most effective ways to localize errors is to
+        develop the program incrementally, and test it often, after adding each
+        piece of code. It is highly likely that if there is an error, it occurs
+        in the last piece of code that you wrote. With incremental program
+        development, the last portion of code is small; the search for bugs is
+        therefore limited to small code fragments. An added benefit is that
+        small code increments will likely lead to few errors, so the programmer
+        is not overwhelmed with long lists of errors. Bottom-up development
+        maximizes the benefits of incremental development. With bottom-up
+        development, once a piece of code has been successfully tested, its
+        behavior won't change when more code is incrementally added later.
+        Existing code doesn't rely on the new parts being added, so if an error
+        occurs, it must be in the newly added code (unless the old parts weren't
+        tested well enough). Instrument program to log information. Typically,
+        print statements are inserted. Although the printed information is
+        effective in some cases, it can also become difficult to inspect when
+        the volume of logged information becomes huge. In those cases, automated
+        scripts may be needed to sift through the data and report the relevant
+        parts in a more compact format. Visualization tools can also help
+        understand the printed data. For instance, to debug a program that
+        manipulates graphs, it may be useful to use a graph visualization tool
+        (such as ATT's graphviz) and print information in the appropriate format
+        (.dot files for graphviz). Instrument program with assertions.
+        Assertions check if the program indeed maintains the properties or
+        invariants that your code relies on. Because the program stops as soon
+        as an assertion fails, it's likely that the point where the program
+        stops is much closer to the cause, and is a good indicator of what the
+        problem is. An example of assertion checking is the repOK() function
+        that verifies if the representation invariant holds at function
+        boundaries. Note that checking invariants or conditions is the basis of
+        defensive programming. The difference is that the number of checks is
+        usually increased during debugging for those parts of the program that
+        are suspected to contain errors. Use debuggers. If a debugger is
+        available, it can replace the manual instrumentation using console.logs
+        if using javascript statements or assertions. Setting breakpoints in the
+        program, stepping into and over functions, watching program expressions,
+        and inspecting the memory contents at selected points during the
+        execution will give all the needed run-time information without
+        generating large, hard-to-read log files. Backtracking. One option is to
+        start from the point where the problem occurred and go back through the
+        code to see how that might have happened. Binary search. The
+        backtracking approach will fail if the error is far from the symptom. A
+        better approach is to explore the code using a divide-and-conquer
+        approach, to quickly pin down the bug. For example, starting from a
+        large piece of code, place a check halfway through the code. If the
+        error doesn't show up at that point, it means the bug occurs in the
+        second half; otherwise, it is in the first half. Thus, the code that
+        needs inspection has been reduced to half. Repeating the process a few
+        times will quickly lead to the actual problem. Problem simplification. A
+        similar approach is to gradually eliminate portions of the code that are
+        not relevant to the bug. For instance, if a function fun f() =
+        (g();h();k()) yields an error, try eliminating the calls to g, h, and k
+        successively (by commenting them out), to determine which is the
+        erroneous one. Then simplify the code in the body of the buggy function,
+        and so on. Continuing this process, the code gets simpler and simpler.
+        The bug will eventually become evident. A similar technique can be
+        applied to simplify data rather than code. If the size of the input data
+        is too large, repeatedly cut parts of it and check if the bug is still
+        present. When the data set is small enough, the cause may be easier to
+        understand. A scientific method: form hypotheses. A related approach is
+        as follows: inspect the test case results; form a hypothesis that is
+        consistent with the observed data; and then design and run a simple test
+        to refute the hypothesis. If the hypothesis has been refuted, derive
+        another hypothesis and continue the process. In some sense, this is also
+        a simplification process: it reduces the number of possible hypotheses
+        at each step. But unlike the above simplification techniques, which are
+        mostly mechanical, this process is driven by active thinking about an
+        explanation. A good approach is to try to come with the simplest
+        hypotheses and the simplest corresponding test cases. Consider, for
+        example, a function palindrome(s:string):bool, and suppose that
+        palindrome("able was I were I saw elba") returns an incorrect value of
+        false. Here are several possible hypotheses for this failure. Maybe
+        palindrome fails for inputs with spaces (test " "); maybe it fails for
+        programs with upper case letters (try "I"); maybe it fails for inputs of
+        odd length greater than one (try "ere"), and so on. Forming and testing
+        these hypotheses one after another can lead the programmer to the source
+        of the problem. Bug clustering. If a large number of errors are being
+        reported, it is useful to group them into classes of related bugs (or
+        similar bugs), and examine only one bug from each class. The intuition
+        is that bugs from each class have the same cause (or a similar cause).
+        Therefore, fixing a bug will automatically fix all the other bugs from
+        the same class (or will make it obvious how to fix them).
+        Error-detection tools. Such tools can help programmers quickly identify
+        violations of certain classes of errors. For instance, tools that check
+        safety properties can verify that file accesses in a program obey the
+        open-read/write-close file sequence; that the code correctly manipulates
+        locks; or that the program always accesses valid memory. Such tools are
+        either dynamic (they instrument the program to find errors at run-time),
+        or use static analysis (look for errors at compile-time). For instance,
+        Purify is a popular dynamic tool that instruments programs to identify
+        memory errors, such as invalid accesses or memory leaks. Examples when
+        using javascript and VScode as your IDE. i would suggest vs code
+        extension as ESlint which will help you find errors and Bugs without
+        even realising it. Eslint is going to help you realise the error within
+        a statement most especially syntax errors and Typos, as shown below;
+        BEST PRACTICES TO AVOID FUTURE BUGS. Leverage the Hints from the IDE
+        This one should be obvious to most programmers, but the reality is that
+        the tools we use are a bit smarter than what we give them credit for.
+        It’s easy to miss these hints. They are sometimes buried in build logs,
+        drowned in a sea of flags, visually too subtle to attract our
+        much-needed attention. Listen to your Integrated Development Environment
+        (IDE)—it is telling you something. One of the most obvious signs that
+        something is up with your code is when the IDE tells you that you are
+        not using a variable you introduced earlier in your code. You had some
+        intent for this variable, but that intent got lost while working on some
+        other aspect. There is certainly a bug lurking there. Another useful
+        alert is when the IDE detects that there is a logical path for a
+        NullPointerException. Maybe the most common case is well taken care of,
+        but there seems to be a road less-travelled to this ubiquitous
+        exception. The activity of writing code forces you to concentrate on the
+        text you are typing while keeping a stack of other concerns in mind.
+        This cognitive load is already heavy; I like to reduce it by removing
+        ambiguities. The IDE will tell you when you are using the same variable
+        name for an instance variable and a local variable. I don’t need to risk
+        being confused about which one I am manipulating. I’ll follow my digital
+        assistant’s advice and rename the local variable in question. Break up
+        Your Content The brain can only keep so much information. And each
+        coding window only shows you about 50 lines. When the code grows, so
+        does the likelihood of bugs, just from not remembering details
+        implemented a few invisible lines away. One simple technique to avoid
+        such troubles is to break up the code. Keep the methods short. Ideally,
+        a well-focused class shouldn’t have more than 200 lines. It’s not always
+        possible, but where it is, you can avoid bugs when each class has only
+        one responsibility. The class’ code itself is easy to review, and its
+        function is easy to remember in other contexts. If you just wrote a
+        large body of code in one class, it’s time to break it up into smaller
+        pieces. This is nothing new. When the metric of cyclomatic complexity
+        was developed in 1976, its first applications tried to limit the
+        complexity of each module, splitting them into smaller modules. These
+        modules became easier to write, and easier to test, too. If the most
+        likely place for defects is where complexity lies, reducing complexity
+        automatically reduces the rate of defects. It’s not just the height of
+        your screen that matters when having “too much to code” might be “too
+        much to cope.” The width matters, too. This is actually a classic source
+        of bugs: a line goes beyond what’s visible without scrolling, meaning
+        it’s not being looked at as often as other lines. Code reviewed less is
+        more likely to be incorrect. Long lines are also bug candidates when
+        overly confident IDEs autofill their content over the developer’s
+        watchful eyes. The simple solution is to break up these long lines, for
+        example, inserting carriage returns when they go over 120 characters.
+        The IDE will often show you this limit graphically. Don’t Leave Your
+        Code to Chance. I have seen many cases where two (or more) classes have
+        the exact same name. They have different package names, but package
+        names are hidden away at the very beginning of each class that uses
+        another class. It’s a good idea to give classes unique names across your
+        code base. This will make sure there is no ambiguity around which one a
+        developer is using. Murphy’s law is not your friend—you will inevitably
+        pick the wrong one otherwise. The behavior of HashMaps may also be a
+        source of hard-to-troubleshoot bugs. The Java Virtual Machine tends to
+        optimize the behavior of HashMaps when the application load grows. What
+        this means for developers is that you will observe one behavior during
+        development, and a different behavior in production. To avoid this kind
+        of head-scratching riddle, I have learned to use LinkedHashMaps even
+        when not needed as they will always return entries in a consistent
+        manner. This is a trick to use wisely: the performance cost of using
+        LinkedHashMaps should be weighed against the risk of having to solve a
+        problem that only happens in production. Reuse Existing Code At the end
+        of the day, there is so much to keep track of, just writing code is
+        doomed to produce bugs. The simplest way to avoid writing bugs is not
+        write any code at all, and leverage some other battle-tested component
+        instead. Reusing code is the ultimate simplification technique, but I am
+        not just talking about integrating other people’s work into your own
+        software. The code you already have is the result of many refactorings.
+        It has real-world experience you are missing (or that you forgot). Use
+        the code you already have as your template. If the quality of your
+        template is not what you need, refactor this code, then reuse it. There
+        shouldn’t be in your program “two best patterns” to do the same thing.
+        As I implement a new feature, I typically look at similar code doing
+        similar things: how classes, methods, and variables are (meaningfully)
+        named, which properties and behaviors are exposed, how objects interact
+        with each other, etc. In all the bodies of code I have maintained for
+        several years, I have found that consistency is the easiest constraint
+        to follow, to teach, and the one that brings the most benefits in terms
+        of overall quality. Code Refactoring. Code refactoring is a process used
+        in the DevOps software development approach that involves editing and
+        cleaning up previously written software code without changing the
+        function of the code at all. The basic purpose of code refactoring is to
+        make the code more efficient and maintainable. This is key in reducing
+        technical cost since it’s much better to clean up the code now than pay
+        for costly errors later. Code refactoring, which improves readability,
+        makes the QA and debugging process go much more smoothly. And while it
+        doesn’t remove bugs, it can certainly help prevent them in the future.
+        And this is why there is a need for routine code refactoring. Code
+        refactoring is important if you want to avoid the dreaded code rot. Code
+        rot results from duplicate code, myriad patches, bad classifications,
+        and other programming discrepancies. Having a revolving door of
+        different developers writing in their own styles can also contribute to
+        code rot, as there is no cohesion to the overall coding script. Best
+        practices for code refactoring. There are several best practices and
+        recommendations regarding code refactoring. One of the smartest ways to
+        approach it is to apply the Agile method and do it one step at a time,
+        followed by testing. This is why so many developers utilizing Agile
+        methodology are big proponents of code refactoring. Breaking down the
+        refactoring process into manageable chunks and performing timely testing
+        before moving on to other updates always results in a higher quality
+        application and a better overall development experience. Here are a few
+        other best practices: Refactor first before adding any new features It
+        is always a good idea to perform refactoring whenever you’re asked to
+        add new features or updates to an existing solution. Yes, it will take
+        longer to finish the project, but it will also reduce the amount of
+        technical debt you or the product owner will have to deal with in the
+        future. Plan your refactoring project and timeline carefully One of the
+        hardest parts of code refactoring is finding the time to do it properly.
+        Think about your overall goal. Do you just want to change the variable
+        names to improve readability? Or do you want to do a full-on cleanup?
+        What are the best ways for you to optimize the code within a reasonable
+        timeframe? The most important outcome of refactoring is that not only is
+        the code cleaner but that it actually works. And remember, it’s going to
+        take longer than you think, so plan accordingly and give yourself a
+        little extra cushion of time. Test often The last thing you want to do
+        when refactoring is mess something up in the process and create bugs or
+        problems that affect the functionality of the product. This is why
+        testing throughout the refactoring process is imperative. Make sure you
+        have proper tests in place before starting any refactoring project. Get
+        your QA team involved It’s always a good idea to get your QA and testing
+        team involved in the refactoring process. Whenever you’re making changes
+        to existing code, even as a clean-up project, it can affect testing
+        outcomes. Changes in classification done during refactoring can cause
+        old tests to fail. In addition, new tests may have to be created for
+        outdated legacy software systems. Both in-depth and regression testing
+        should be performed as part of a refactoring effort. This will ensure
+        that the functionality of the solution was not affected in any way.
+        Development teams using the Agile method for both programming and
+        testing will most likely already be on the same page involving
+        refactoring. Focus on progress, not perfection All code eventually
+        becomes the dreaded legacy code. Accept the fact that you will never be
+        100 percent satisfied. The code you’re currently refactoring will become
+        stale and outdated in the near future and will require refactoring all
+        over again. You have to start thinking about refactoring as an ongoing
+        maintenance project. Just like you have to clean and organize your home
+        throughout the week, you will need to clean and organize your code on
+        many different occasions. Try refactoring automation As with most
+        processes, the more it can be automated, the easier and faster
+        refactoring becomes. Automating some or all of the refactoring processes
+        is becoming more and more popular with developers. There are many
+        shortcuts and tools to make refactoring less painful. A lot of them can
+        be learned by reading Martin Fowler’s book. Two IDEs (Integrated
+        Development Environments) that have built-in automated refactoring
+        support are Eclipse and IntelliJ IDEA. Look for more refactoring
+        automation in other IDEs in the near future as refactoring shortcuts
+        continue to be a major concern for the development community. Code
+        Refactoring in Action; This kind of code can be refactored and be
+        changed to something like this and still produces the same output; This
+        will help in reading and understanding your code more easily and also
+        avoid many lines and messy code. Thanks for Reading 💜
+      </p>
+    </div>
+    <div class="it">
+      <h2>Information and Technology</h2>
+      <p>
+        Information and Technology Published 7 months ago According to wikipedia
+        Information technology (IT) is the use of computers to store, retrieve,
+        transmit, and manipulate data[1] or information. IT is typically used
+        within the context of business operations as opposed to personal or
+        entertainment technologies. Basically IT in simple words is a field that
+        contains my computer knowledge and understanding including network ,
+        softwares and many more in general. THE PROS AND CONS OF INFORMATION AND
+        TECHNOLOGY. In universities IT is considered as a group of computer
+        based majors and that involves; Software engineering which is the making
+        of computer software programmes in simple words, The next major in IT is
+        Networking which is the interaction with networks and setting up things
+        like LAN,WAN and basically things that make the connectivity to the
+        internet works, Digging deep into IT majors also involves communication
+        and network systems , Computer data scientists and many more… THE PROS.
+        Be better at your job, For anyone who already has a job or a career in a
+        particular area, IT courses can be an outstanding way to get a greater
+        understanding of the technological aspects of the job. A diploma in IT
+        is highly valued in many careers, especially those with a financial or
+        creative focus. Employees who complete a course in computer science, or
+        similar areas, give themselves a boost on their job performance
+        instantly. Earn more money, Having a solid base in a practical area, or
+        upskilling if you already have a set of expertise, is the right way to
+        go about starting on a good salary and receiving a raise. As information
+        technology courses are highly prized in modern businesses, graduates get
+        a leg up on the competition with these transferable skills. Make more
+        connections, One of the biggest benefits of completing IT courses that
+        focus on practical skills and employability, is that students meet
+        like-minded classmates and make new connections. Networking is a crucial
+        part of finding employment in the professional sphere, and interacting
+        with others in a learning space will provide insight and friendships
+        that would not be possible otherwise. Expand your knowledge , On a more
+        abstract level, keeping the mind active will have noticeable benefits
+        for anyone who has been out of schooling for a while. By putting
+        themselves in unfamiliar situations and completing new learning
+        challenges, students of these information technology courses often find
+        a renewed enthusiasm for education, as well as a heightened ability to
+        adapt and expand their minds to fresh skill sets. Modernize your skills,
+        Staying relevant in a constantly changing workforce is no easy task, and
+        IT courses are currently among the most consistently expanding areas of
+        demand for employees. Updating a current skill set, or adding extra
+        accomplishments to an existing list, is a sure-fire way to establish
+        mastery and experience in many aspects of your business. THE CONS
+        Unemployment and lack of job security, implementing the information
+        systems can save a great deal of time during the completion of tasks and
+        some labor mechanic works. Most paperwork can be processed immediately,
+        financial transactions are automatically calculated, etc. As technology
+        improves, tasks that were formerly performed by human employees are now
+        carried out by computer systems. For example, automated telephone
+        answering systems have replaced live receptionists in many organizations
+        or online and personal assistants can be good examples also. Industry
+        experts believe that the internet has made job security a big issue as
+        technology keeps on changing with each day. This means that one has to
+        be in a constant learning mode, if he or she wishes for their job to be
+        secure. Dominant culture, while information technology may have made the
+        world a global village, it has also contributed to one culture
+        dominating another weaker one. For example it is now argued that the US
+        influences how most young teenagers all over the world now act, dress
+        and behave. Languages too have become overshadowed, with English
+        becoming the primary mode of communication for business and everything
+        else. Security issues, thieves and hackers get access to identities and
+        corporate saboteurs target sensitive company data. Such data can include
+        vendor information, bank records, intellectual property and personal
+        data on company management. The hackers distribute the information over
+        the Internet, sell it to rival companies or use it to damage the
+        company’s image. For example, several retail chains were targeted
+        recently by hackers who stole customer information from their
+        information systems and distributed Social Security numbers and credit
+        card data over the Internet. Implementation expenses, to integrate the
+        information system it requires a pretty good amount of cost in the case
+        of software, hardware and people. Software, hardware and some other
+        services should be rented, bought and supported. Employees need to be
+        trained with unfamiliar information technology and software. In
+        conclusion, despite the cons of IT (information and communication
+        Technology) , In general IT is among the best opportunities to major
+        into due to its high increasing rate in employment which can be good for
+        someone`s future. Thanks for Reading 💜
+      </p>
+    </div>
+    <div class="social">
+      <h2>Social related</h2>
+      <p>
+        My journey through ATLP <br />
+        ATLP Andela Technical Leadership program is a project hosted by Andela
+        Rwanda to help train motivated software engineers to become job ready
+        and acquire technical skills within a short period of time. WHY I JOINED
+        ANDELA Andela felt like a headstart to my career goals as a software
+        engineer. I needed to find a place where I could put my skills in
+        programming to use and test, and that is when andela came in. By joining
+        Andela, a trainee is able to acquire advanced skills and technologies
+        like NODE JS , REACT , MONGODB , PostGres , GITHUB and GIT, You also get
+        to meet your trainers who are not just trainers but also like brothers.
+        Andela is not only a team but also an expanding family. WHAT I’M GETTING
+        FROM ANDELA There are many skills that Andela provides, not only working
+        with computers but also interacting with the world and its people. By
+        saying that I mean the world class technical skills taught by the best
+        pals in Andela. As a team, we work remotely, Which is also another skill
+        that we must be familiar with because the world is changing so fast. In
+        fact I think people will no longer go to work at the office but rather
+        stay at home and work from there. To the part of programming, we get to
+        work with a technology that allows us to share codes and update codes as
+        if we are working in the same room. Github is the technology that we use
+        and thanks to our facilitators that taught us how to interact with it.
+        WHERE I SEE MYSELF IN THE FUTURE After completing the wonderful 9 months
+        with andela, I see myself in a world of programming. Also ready to start
+        fulfilling my dreams of working with tech companies. Andela helps us
+        become differentiated from other software engineers around the globe,
+        and how is that!; We acquired iconic skills which included working
+        remotely also the technical skills that we acquire which help us to keep
+        a good attitude with our workmates and more about problem solving when
+        working in teams. We also learn public speaking skills that help you to
+        know how to sell your ideas , defend your projects and talk among large
+        numbers. This will help me start working with many people on big
+        projects and outstanding everyone else on the job market. All in all I
+        would recommend Rwandan programmers out there globally to join Andela as
+        soon as possible. Best regards.
+      </p>
+    </div>
+  </body>
+</html>

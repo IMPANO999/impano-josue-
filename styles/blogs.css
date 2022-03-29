@@ -1,0 +1,36 @@
+.title {
+  text-align: center;
+  margin-top: 3%;
+  text-decoration: underline;
+}
+.tech h2 {
+  text-align: center;
+  text-decoration: underline;
+  border-radius: 25px;
+}
+.social h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+.it h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+.tech p {
+  border-radius: 40px;
+  background-color: antiquewhite;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.it p {
+  border-radius: 40px;
+  background-color: antiquewhite;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.social p {
+  border-radius: 40px;
+  background-color: antiquewhite;
+  margin-left: 2%;
+  margin-right: 2%;
+}
